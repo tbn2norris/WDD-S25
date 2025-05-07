@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Bros Restaurant</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="mario.js" defer></script>
+  <style>
+    body { background-color: #fff8dc; font-family: 'Segoe UI', sans-serif; }
+    .menu-item { border: 2px dashed #ff0000; padding: 10px; margin: 10px; border-radius: 8px; }
+    .menu-title { font-size: 1.5rem; color: #c0392b; }
+  </style>
+</head>
+<body onload="init()">
+  <div class="container py-5">
+    <h1 class="text-center text-danger">🍄 Mario Bros Restaurant 🍝</h1>
+    <p class="text-center">Select your power-up meals and enjoy!</p>
+
+    <div class="row">
+      <div class="col-md-4 menu-item"><div class="menu-title">Super Mushroom Spaghetti</div><p>Boosts your size and flavor!</p></div>
+      <div class="col-md-4 menu-item"><div class="menu-title">Fire Flower Pizza</div><p>Spicy enough to throw fireballs!</p></div>
+      <div class="col-md-4 menu-item"><div class="menu-title">Starman Lasagna</div><p>Invincible taste!</p></div>
+      <div class="col-md-4 menu-item"><div class="menu-title">Koopa Krunch Wrap</div><p>Crunchy and dangerous!</p></div>
+      <div class="col-md-4 menu-item"><div class="menu-title">Luigi’s Green Salad</div><p>Fresh and green like Luigi’s overalls!</p></div>
+      <div class="col-md-4 menu-item"><div class="menu-title">Toad’s Garlic Bread</div><p>Short and strong in flavor!</p></div>
+      <div class="col-md-4 menu-item"><div class="menu-title">Yoshi Egg Omelette</div><p>Colorful and full of surprises!</p></div>
+      <div class="col-md-4 menu-item"><div class="menu-title">Bowser’s Hot Wings</div><p>Fire-breathing good!</p></div>
+      <div class="col-md-4 menu-item"><div class="menu-title">Princess Peach Pie</div><p>Sweet royal dessert!</p></div>
+    </div>
+
+    <hr>
+    <h3>Order Form</h3>
+    <form onsubmit="return handleSubmit()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" required>
+      </div>
+      <div class="form-group">
+        <label for="meal">Select Your Power-Up Meal:</label>
+        <select id="meal" class="form-control">
+          <option>Super Mushroom Spaghetti</option>
+          <option>Fire Flower Pizza</option>
+          <option>Starman Lasagna</option>
+          <option>Koopa Krunch Wrap</option>
+          <option>Luigi’s Green Salad</option>
+          <option>Toad’s Garlic Bread</option>
+          <option>Yoshi Egg Omelette</option>
+          <option>Bowser’s Hot Wings</option>
+          <option>Princess Peach Pie</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone (tel):</label>
+        <input type="tel" class="form-control" id="phone">
+      </div>
+      <button type="button" id="previewBtn" class="btn btn-info">Preview</button>
+      <button type="button" id="resetBtn" class="btn btn-warning">Reset</button>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
